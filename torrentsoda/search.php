@@ -118,19 +118,20 @@ class SynoDLMSearchTorrentSoda
 	
 	private function getBaseUrl()
 	{
-		$url = null;
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $this->URL_CLOUD);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$jsonString = curl_exec($ch);
-		$result = json_decode($jsonString);
-		if ($result->success)
-		{
-			$extra = json_decode($result->extra);
-			$url = $extra->dataValue;
-		}
-		curl_close($ch);
-		return $url;
+		//$url = null;
+		//$ch = curl_init();
+		//curl_setopt($ch, CURLOPT_URL, $this->URL_CLOUD);
+		//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		//$jsonString = curl_exec($ch);
+		//$result = json_decode($jsonString);
+		//if ($result->success)
+		//{
+		//	$extra = json_decode($result->extra);
+		//	$url = $extra->dataValue;
+		//}
+		//curl_close($ch);
+		//return $url;
+		return "https://sodatt.com/";
 	}
 	
 	
