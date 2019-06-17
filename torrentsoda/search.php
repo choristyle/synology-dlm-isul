@@ -131,7 +131,7 @@ class SynoDLMSearchTorrentSoda
 		//}
 		//curl_close($ch);
 		//return $url;
-		return "https://ttsoda2.com/";
+		return "https://ttsoda3.com/";
 	}
 	
 	
