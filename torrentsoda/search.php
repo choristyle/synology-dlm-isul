@@ -28,7 +28,7 @@ include('simple_html_dom.php');
 
 class SynoDLMSearchTorrentSoda
 {
-	private $URL_CLOUD = "https://com-isulnara-datastore.appspot.com/data/tsoda/soda/url";
+	private $URL_CLOUD = "http://localhost:8080/static/ttsoda_addr";
 	
 	private $debugEnabled = false;
 
@@ -118,20 +118,20 @@ class SynoDLMSearchTorrentSoda
 	
 	private function getBaseUrl()
 	{
-		//$url = null;
-		//$ch = curl_init();
-		//curl_setopt($ch, CURLOPT_URL, $this->URL_CLOUD);
-		//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		//$jsonString = curl_exec($ch);
-		//$result = json_decode($jsonString);
+		$url = null;
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $this->URL_CLOUD);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$jsonString = curl_exec($ch);
+		$result = json_decode($jsonString);
 		//if ($result->success)
 		//{
 		//	$extra = json_decode($result->extra);
 		//	$url = $extra->dataValue;
 		//}
-		//curl_close($ch);
-		//return $url;
-		return "https://ttsoda3.com/";
+		$url = $result->value;
+		curl_close($ch);
+		return $url;
 	}
 	
 	
